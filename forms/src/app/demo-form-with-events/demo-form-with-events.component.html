@@ -1,0 +1,20 @@
+<div class="ui raised segment">
+    <h2 class="ui header">Demo Form with Validation: SKU</h2>
+    <form
+        [formGroup]="myForm"
+        class="ui form"    
+        [class.error]="!myForm.valid && myForm.touched"
+    >
+        <div class="field">
+            <label for="skuInput">SKU</label>
+            <input type="text"
+                    id="skuInput"
+                    placeholder="SKU"
+                    formControlName="sku">
+        </div>
+        <div *ngIf="!myForm.valid"
+            class="ui error message">Form is invalid</div>
+        <button type="submit" class="ui button">Submit</button>
+    </form>
+    
+</div>

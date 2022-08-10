@@ -1,0 +1,20 @@
+<div class="ui raised segment">
+    <h2 class="ui header">Demo Form with ng-model</h2>
+    <form
+        #f="ngForm"
+        class="ui form"    
+    >
+        <div class="ui info message">
+            The product name: {{productName}}
+        </div>
+        <div class="field">
+            <label for="productNameInput">productName</label>
+            <input type="text"
+                    id="productNameInput"
+                    placeholder="product name"
+                    name="productName"
+                    [(ngModel)]="productName">
+        </div>
+        <button type="submit" class="ui button">Submit</button>
+    </form>
+</div>
